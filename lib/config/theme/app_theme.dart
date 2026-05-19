@@ -1,0 +1,59 @@
+import 'package:consultant_customer_app/config/theme/app_spacing.dart';
+import 'package:consultant_customer_app/config/theme/app_text_styles.dart';
+import 'package:consultant_customer_app/core/constants/app_theme_constants.dart';
+import 'package:flutter/material.dart';
+
+import 'app_colors.dart';
+
+class AppTheme {
+  AppTheme._();
+
+  // Light Theme
+  static ThemeData get light => ThemeData(
+    useMaterial3: true,
+    brightness: Brightness.light,
+    scaffoldBackgroundColor: Colors.white,
+    colorScheme: const ColorScheme.light(
+      primary: AppColors.primary,
+      onPrimary: Colors.white,
+      secondary: AppColors.secondary,
+      onSecondary: Colors.white,
+      surface: Colors.white,
+    ),
+    fontFamily: AppThemeConstants.fontFamily,
+    textTheme: const TextTheme(
+      headlineLarge: AppTextStyles.headlineLarge,
+      bodyLarge: AppTextStyles.bodyLarge,
+      displaySmall: AppTextStyles.displaySmall,
+      labelLarge: AppTextStyles.labelLarge,
+      labelMedium: AppTextStyles.labelMedium,
+      titleLarge: AppTextStyles.titleLarge,
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: AppColors.primary,
+        foregroundColor: Colors.white,
+        elevation: 0.0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        ),
+      ),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      filled: true,
+      fillColor: Colors.white,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderSide: BorderSide.none,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderSide: BorderSide.none,
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderSide: const BorderSide(color: AppColors.primary, width: 2.0),
+      ),
+    ),
+  );
+}

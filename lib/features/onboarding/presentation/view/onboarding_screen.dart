@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
 
-class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+class OnboardingScreen extends StatelessWidget {
+   OnboardingScreen({super.key});
 
-  @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
-}
+  final PageController _pageController = PageController();
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Column(
+        children: [
+          // Upper section
+          _getPageViewSection(),         
+          // Lower Section
+
+        ],
+      ),
+    );
+  }
+
+  Widget _getPageViewSection() {
+    return PageView.builder(itemBuilder: (context, index) {
+      
+    },itemCount: 0,controller: _pageController,);
   }
 }

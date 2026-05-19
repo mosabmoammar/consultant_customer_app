@@ -1,0 +1,14 @@
+import 'package:consultant_customer_app/core/errors/failures.dart';
+import 'package:dartz/dartz.dart';
+
+abstract class UseCase<T, Params> {
+  Future<Either<Failure, T>> call(Params params);
+}
+
+abstract class SyncUseCase<T, Params> {
+  Either<Failure, T> call(Params params);
+}
+
+class NoParams {
+  const NoParams();
+}
