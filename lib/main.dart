@@ -1,10 +1,23 @@
+import 'package:consultant_customer_app/config/injection/injection_container.dart';
+import 'package:consultant_customer_app/config/routes/app_router.dart';
+import 'package:consultant_customer_app/config/theme/app_theme.dart';
+import 'package:consultant_customer_app/core/constants/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'features/onboarding/presentation/view/onboarding_screen.dart';
-
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ),
+  );
+
+  await setupDI();
+
   runApp(const ProviderScope(child: MainApp()));
 }
 
@@ -13,6 +26,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: OnboardingScreen());
+    return MaterialApp(
+      title: 'Consultant App',
+      theme: AppTheme.light,
+      onGenerateRoute: AppRouter.onGenerateRoute,
+      initialRoute: Routes.onboarding,
+    );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   AppColors._();
-  
+
   static const primary = Color(0xFF3E61FF);
   static const secondary = Color(0xFFF47839);
 
@@ -11,9 +11,11 @@ class AppColors {
   static const lightGray = Color(0xFFFAFAFA);
   static const lightGray1 = Color(0xFFF6F6F6);
   static const lightGray2 = Color(0xFFF3F3F3);
-  static const lightGray3 = Color(0xFFBEBEBE);
-  static const lightGray4 = Color(0xFFA69FAD);
+  static const lightGray3 = Color(0xFFEAEAEA);
+  static const lightGray4 = Color(0xFFBEBEBE);
+  static const lightGray5 = Color(0xFFA69FAD);
   static const gray = Color(0xFF969696);
+  static const darkGray5 = Color(0xFF313131);
   static const darkGray4 = Color(0xFF727272);
   static const darkGray3 = Color(0xFF6F6F6F);
   static const darkGray2 = Color(0xFF696969);
@@ -35,4 +37,7 @@ class AppColors {
   static const red = Color(0xFFE92727);
   static const lightRed = Color(0xFFFF6767);
   static const lightRed1 = Color(0xFFF26464);
+
+  static const textFieldColor = Color(0xFFE6E6E6);
+  static const onTextFieldColor = Color(0xFF969696);
 }

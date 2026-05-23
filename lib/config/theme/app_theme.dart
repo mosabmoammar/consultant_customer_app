@@ -33,9 +33,11 @@ class AppTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
+        disabledBackgroundColor: AppColors.primary.withValues(alpha: 0.5),
+        disabledForegroundColor: Colors.white.withValues(alpha: 0.7),
         elevation: 0.0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+          borderRadius: BorderRadius.circular(AppSpacing.s4),
         ),
       ),
     ),
@@ -43,15 +45,15 @@ class AppTheme {
       filled: true,
       fillColor: Colors.white,
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderRadius: BorderRadius.circular(AppSpacing.s4),
         borderSide: BorderSide.none,
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderRadius: BorderRadius.circular(AppSpacing.s4),
         borderSide: BorderSide.none,
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(AppSpacing.radiusXsm),
+        borderRadius: BorderRadius.circular(AppSpacing.s4),
         borderSide: const BorderSide(color: AppColors.primary, width: 2.0),
       ),
     ),

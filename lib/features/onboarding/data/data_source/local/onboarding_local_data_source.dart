@@ -7,6 +7,8 @@ abstract class OnboardingLocalDataSource {
 }
 
 class OnboardingLocalDataSourceImpl implements OnboardingLocalDataSource {
+  const OnboardingLocalDataSourceImpl();
+  
   @override
   List<OnboardingItemModel> getItems() {
     try {

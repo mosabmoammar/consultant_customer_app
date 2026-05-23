@@ -11,6 +11,8 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_riverpod: ^3.3.1
+  flutter_svg: ^2.3.0
+  get_it: ^9.2.1
   internet_connection_checker: ^3.0.1
 
 dev_dependencies:
@@ -24,6 +26,7 @@ flutter:
   assets:
     - assets/json/countries.json
     - assets/images/
+    - assets/svg/
 
   fonts:
     - family: Outfit
