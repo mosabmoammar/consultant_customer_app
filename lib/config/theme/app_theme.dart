@@ -23,19 +23,23 @@ class AppTheme {
     fontFamily: AppThemeConstants.fontFamily,
     textTheme: const TextTheme(
       headlineLarge: AppTextStyles.headlineLarge,
+      headlineMedium: AppTextStyles.headlineMedium,
       bodyLarge: AppTextStyles.bodyLarge,
+      displayLarge: AppTextStyles.displayLarge,
+      displayMedium: AppTextStyles.displayMedium,
       displaySmall: AppTextStyles.displaySmall,
       labelLarge: AppTextStyles.labelLarge,
       labelMedium: AppTextStyles.labelMedium,
+      labelSmall: AppTextStyles.labelSmall,
       titleLarge: AppTextStyles.titleLarge,
+      titleMedium: AppTextStyles.titleMedium,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,
-        disabledBackgroundColor: AppColors.primary.withValues(alpha: 0.5),
-        disabledForegroundColor: Colors.white.withValues(alpha: 0.7),
-        elevation: 0.0,
+        // disabledBackgroundColor: AppColors.primary.withValues(alpha: 0.5),
+        // disabledForegroundColor: Colors.white.withValues(alpha: 0.7),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(AppSpacing.s4),
         ),
@@ -43,7 +47,7 @@ class AppTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: Colors.white,
+      fillColor: AppColors.lightGray2,
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppSpacing.s4),
         borderSide: BorderSide.none,

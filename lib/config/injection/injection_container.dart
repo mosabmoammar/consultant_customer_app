@@ -1,14 +1,15 @@
-import 'package:consultant_customer_app/features/onboarding/data/repositories/country_repository_impl.dart';
-import 'package:consultant_customer_app/features/onboarding/domain/repositories/onboarding_repository.dart';
-import 'package:consultant_customer_app/features/onboarding/domain/use_cases/get_countries_use_case.dart';
-import 'package:consultant_customer_app/features/onboarding/domain/use_cases/get_onboarding_items_use_case.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../features/onboarding/data/data_source/local/onboarding_local_data_source.dart';
-import '../../features/onboarding/data/mappers/country_mapper.dart';
-import '../../features/onboarding/data/mappers/onboarding_item_mapper.dart';
-import '../../features/onboarding/data/repositories/onboarding_repository_impl.dart';
-import '../../features/onboarding/domain/repositories/country_repository.dart';
+import '../../features/auth/data/onboarding/local/onboarding_local_data_source.dart';
+import '../../features/auth/data/onboarding/mappers/country_mapper.dart';
+import '../../features/auth/data/onboarding/mappers/onboarding_item_mapper.dart';
+import '../../features/auth/data/onboarding/repositories/country_repository_impl.dart';
+import '../../features/auth/data/onboarding/repositories/onboarding_repository_impl.dart';
+import '../../features/auth/domain/onboarding/repositories/country_repository.dart';
+import '../../features/auth/domain/onboarding/repositories/onboarding_repository.dart';
+import '../../features/auth/domain/onboarding/use_cases/get_countries_use_case.dart';
+import '../../features/auth/domain/onboarding/use_cases/get_onboarding_items_use_case.dart';
+
 
 final sl = GetIt.instance;
 
