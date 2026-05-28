@@ -19,6 +19,16 @@ class AppTextStyles {
     height: 1.0
   );
 
+  // Heading/h1 500 semiBold 20px
+  static const headlineSmall = TextStyle(
+    fontFamily: AppThemeConstants.fontFamily,
+    fontWeight: FontWeight.w500,
+    fontSize: 18.0,
+    height: 1.26
+  );
+
+
+
   // body 300 Light 16px 1.26
   static const bodyLarge = TextStyle(
     fontFamily: AppThemeConstants.fontFamily,

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../features/auth/presentation/onboarding/view/onboarding_screen.dart';
 import '../../features/auth/presentation/auth_methods/view/sign_in_via_email_screen.dart';
 import '../../features/auth/presentation/auth_methods/view/sign_up_methods_screen.dart';
+import '../../features/user_category_selection/presentation/view/user_category_selection_screen.dart';
 
 class AppRouter {
   AppRouter._();
@@ -19,6 +20,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SignInViaEmailScreen());
       case Routes.otpScreen:
         return MaterialPageRoute(builder: (_) => const OtpScreen());
+      case Routes.userCategorySelectionScreen:
+        return MaterialPageRoute(
+          builder: (_) => const UserCategorySelectionScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) =>

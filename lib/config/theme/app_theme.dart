@@ -24,6 +24,7 @@ class AppTheme {
     textTheme: const TextTheme(
       headlineLarge: AppTextStyles.headlineLarge,
       headlineMedium: AppTextStyles.headlineMedium,
+      headlineSmall: AppTextStyles.headlineSmall,
       bodyLarge: AppTextStyles.bodyLarge,
       displayLarge: AppTextStyles.displayLarge,
       displayMedium: AppTextStyles.displayMedium,

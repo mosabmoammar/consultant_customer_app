@@ -1,10 +1,5 @@
-import 'package:consultant_customer_app/core/widgets/custom_text_field.dart';
 import 'package:consultant_customer_app/core/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
-
-import '../../config/theme/app_colors.dart';
-import '../../config/theme/app_spacing.dart';
-import '../utils/extensions.dart';
 
 class CustomPasswordFormField extends StatefulWidget {
   final String label;

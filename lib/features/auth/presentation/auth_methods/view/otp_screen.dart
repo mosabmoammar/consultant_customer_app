@@ -1,3 +1,4 @@
+import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/widgets/main_button.dart';
 import 'package:consultant_customer_app/core/widgets/text_title.dart';
 import 'package:consultant_customer_app/features/auth/presentation/widgets/otp_text_field.dart';
@@ -71,7 +72,14 @@ class _OtpScreenState extends State<OtpScreen> {
                       AppSpacing.s16,
                       AppSpacing.s16 + bottomInset,
                     ),
-                    child: MainButton(onPressed: () {}),
+                    child: MainButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                          context,
+                          Routes.userCategorySelectionScreen,
+                        );
+                      },
+                    ),
                   ),
                 ),
               ],
