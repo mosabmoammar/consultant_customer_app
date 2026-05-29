@@ -1,5 +1,6 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/features/auth/presentation/auth_methods/view/otp_screen.dart';
+import 'package:consultant_customer_app/features/personal_information/presentation/view/personal_info_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/presentation/onboarding/view/onboarding_screen.dart';
@@ -24,6 +25,8 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const UserCategorySelectionScreen(),
         );
+      case Routes.personalInfoScreen:
+        return MaterialPageRoute(builder: (_) => const PersonalInfoScreen(),settings: settings);
       default:
         return MaterialPageRoute(
           builder: (context) =>

@@ -37,6 +37,14 @@ class AppTextStyles {
     height: 1.26,
   );
 
+  // body 400 Regular 12px 1.00
+  static const bodyMedium = TextStyle(
+    fontFamily: AppThemeConstants.fontFamily,
+    fontWeight: FontWeight.w300,
+    fontSize: 16.0,
+    height: 1.26,
+  );
+
   // label 500 Medium 14px 1.26
   static const labelLarge = TextStyle(
     fontFamily: AppThemeConstants.fontFamily,

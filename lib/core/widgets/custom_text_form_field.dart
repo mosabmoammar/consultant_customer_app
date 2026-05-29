@@ -12,6 +12,8 @@ class CustomTextFormField extends StatelessWidget {
   final String? Function(String?)? validator;
   final bool obscureText;
   final Widget? suffixIcon;
+  final bool isLongText;
+  final TextAlignVertical? textAlignVertical;
   const CustomTextFormField({
     super.key,
     required this.label,
@@ -19,8 +21,10 @@ class CustomTextFormField extends StatelessWidget {
     this.controller,
     this.keyboardType,
     this.validator,
-     this.obscureText = false,
+    this.obscureText = false,
     this.suffixIcon,
+    this.isLongText = false,
+    this.textAlignVertical,
   });
 
   @override
@@ -38,14 +42,27 @@ class CustomTextFormField extends StatelessWidget {
             fillColor: AppColors.lightGray2,
             filled: true,
             hintText: hintText,
-            constraints: const BoxConstraints(maxHeight: AppSpacing.s44),
+            constraints: BoxConstraints(
+              maxHeight: isLongText ? AppSpacing.s100 : AppSpacing.s44,
+            ),
+            contentPadding: EdgeInsets.symmetric(
+              horizontal: AppSpacing.s16,
+              vertical: AppSpacing.s12,
+            ),
+
             hintStyle: context.textTheme.labelMedium?.copyWith(
               color: AppColors.gray,
             ),
-            suffixIcon: suffixIcon
+            suffixIcon: suffixIcon,
           ),
           obscureText: obscureText,
           validator: validator,
+          maxLines: isLongText ? null : 1,
+          expands: isLongText ? true : false,
+          // maxLength: isLongText ? 100 : null,
+          textAlignVertical: isLongText
+              ? TextAlignVertical.top
+              : textAlignVertical,
         ),
       ],
     );

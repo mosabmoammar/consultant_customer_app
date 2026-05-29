@@ -26,6 +26,7 @@ class AppTheme {
       headlineMedium: AppTextStyles.headlineMedium,
       headlineSmall: AppTextStyles.headlineSmall,
       bodyLarge: AppTextStyles.bodyLarge,
+      bodyMedium: AppTextStyles.bodyMedium,
       displayLarge: AppTextStyles.displayLarge,
       displayMedium: AppTextStyles.displayMedium,
       displaySmall: AppTextStyles.displaySmall,
@@ -61,6 +62,10 @@ class AppTheme {
         borderRadius: BorderRadius.circular(AppSpacing.s4),
         borderSide: const BorderSide(color: AppColors.primary, width: 2.0),
       ),
+    ),
+    appBarTheme: AppBarTheme(
+      surfaceTintColor: Colors.transparent,
+      scrolledUnderElevation: 0.0,
     ),
   );
 }

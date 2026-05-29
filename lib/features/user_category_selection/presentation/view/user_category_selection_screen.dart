@@ -1,3 +1,4 @@
+import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/constants/assets_manager/svg_assets.dart';
 import 'package:consultant_customer_app/core/widgets/main_button.dart';
 import 'package:consultant_customer_app/core/widgets/text_title.dart';
@@ -67,7 +68,11 @@ class _UserCategorySelectionScreenState
 
               const Spacer(),
 
-              MainButton(onPressed: () {}),
+              MainButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, Routes.personalInfoScreen);
+                },
+              ),
             ],
           ),
         ),

@@ -7,6 +7,7 @@ class AppColors {
   static const secondary = Color(0xFFF47839);
 
   static const lightBlue = Color(0xFFEFF2FF);
+  static const lightBlue1 = Color(0xFF6395EC);
 
   static const lightGray = Color(0xFFFAFAFA);
   static const lightGray1 = Color(0xFFF6F6F6);
@@ -38,6 +39,7 @@ class AppColors {
   static const red = Color(0xFFE92727);
   static const lightRed = Color(0xFFFF6767);
   static const lightRed1 = Color(0xFFF26464);
+
 
   static const textFieldColor = Color(0xFFE6E6E6);
   static const onTextFieldColor = Color(0xFF969696);

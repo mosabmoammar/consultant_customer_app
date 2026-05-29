@@ -14,8 +14,9 @@ class AppSpacing {
   static const double s48 = 48.0;
   static const double s50 = 50.0;
   static const double s56 = 56.0;
+  static const double s80 = 80.0;
+  static const double s100 = 100.0;
 
   static const double buttonHeight = 52.0;
   static const double inputHeight = 56.0;
-
 }
