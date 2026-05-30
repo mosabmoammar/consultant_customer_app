@@ -6,8 +6,8 @@ import 'package:consultant_customer_app/core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
 
-import '../../../domain/onboarding/entities/country_entity.dart';
-import '../../../domain/onboarding/repositories/country_repository.dart';
+import '../../../domain/entities/country_entity.dart';
+import '../../../domain/repositories/country_repository.dart';
 import '../mappers/country_mapper.dart';
 import '../models/country_model.dart';
 

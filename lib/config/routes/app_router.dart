@@ -1,11 +1,12 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
-import 'package:consultant_customer_app/features/auth/presentation/auth_methods/view/otp_screen.dart';
+import 'package:consultant_customer_app/features/auth/presentation/view/otp_screen.dart';
 import 'package:consultant_customer_app/features/personal_information/presentation/view/personal_info_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/auth/presentation/onboarding/view/onboarding_screen.dart';
-import '../../features/auth/presentation/auth_methods/view/sign_in_via_email_screen.dart';
-import '../../features/auth/presentation/auth_methods/view/sign_up_methods_screen.dart';
+import '../../features/auth/presentation/view/onboarding_screen.dart';
+import '../../features/auth/presentation/view/sign_in_via_email_screen.dart';
+import '../../features/auth/presentation/view/sign_up_methods_screen.dart';
+import '../../features/customer/select_interest/presentation/view/select_interest_screen.dart';
 import '../../features/user_category_selection/presentation/view/user_category_selection_screen.dart';
 
 class AppRouter {
@@ -26,7 +27,16 @@ class AppRouter {
           builder: (_) => const UserCategorySelectionScreen(),
         );
       case Routes.personalInfoScreen:
-        return MaterialPageRoute(builder: (_) => const PersonalInfoScreen(),settings: settings);
+        final category = settings.arguments as UserCategory?;
+        return MaterialPageRoute(
+          builder: (_) =>
+              PersonalInfoScreen(category: category ?? UserCategory.customer),
+        );
+      case Routes.selectInterestScreen:
+        return MaterialPageRoute(
+          builder: (_) =>
+              SelectInterestScreen(),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) =>

@@ -1,4 +1,5 @@
 import 'package:consultant_customer_app/config/theme/app_colors.dart';
+import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/utils/extensions.dart';
 import 'package:consultant_customer_app/core/widgets/custom_text_form_field.dart';
 import 'package:consultant_customer_app/core/widgets/main_button.dart';
@@ -11,7 +12,9 @@ import '../../../../config/theme/app_spacing.dart';
 import '../../../../core/widgets/icon_button_back_arrow.dart';
 
 class PersonalInfoScreen extends StatefulWidget {
-  const PersonalInfoScreen({super.key});
+  final UserCategory category;
+
+  const PersonalInfoScreen({super.key, required this.category});
 
   @override
   State<PersonalInfoScreen> createState() => _PersonalInfoScreenState();
@@ -19,6 +22,9 @@ class PersonalInfoScreen extends StatefulWidget {
 
 class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
   final _formKey = GlobalKey<FormState>();
+
+  bool get _isConsultant => widget.category == UserCategory.consultant;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +39,10 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
             child: Column(
               children: [
                 // Title
-                TextTitle(text: 'Fill your personal information'),
+                const Align(
+                  alignment: Alignment.centerLeft,
+                  child: TextTitle(text: 'Fill your personal information'),
+                ),
 
                 const SizedBox(height: AppSpacing.s24),
 
@@ -78,49 +87,67 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                   key: _formKey,
                   child: Column(
                     children: [
-                      CustomTextFormField(label: 'Name', hintText: 'Jhon Doe'),
-
-                      const SizedBox(height: AppSpacing.s16),
-
-                      CustomTextFormField(
-                        label: 'Email ID',
-                        hintText: 'johndoe@email.com',
+                      const CustomTextFormField(
+                        label: 'Name',
+                        hintText: 'Jhon Doe',
                       ),
 
+                      if (_isConsultant) ...[
+                        const SizedBox(height: AppSpacing.s16),
+
+                        const CustomTextFormField(
+                          label: 'Email ID',
+                          hintText: 'johndoe@email.com',
+                        ),
+
+                        const SizedBox(height: AppSpacing.s16),
+
+                        const PhoneInputFormField(),
+
+                        const SizedBox(height: AppSpacing.s16),
+
+                        const CustomTextFormField(
+                          label: 'Country',
+                          hintText: 'United Kingdom',
+                        ),
+
+                        const SizedBox(height: AppSpacing.s16),
+
+                        const CustomTextFormField(
+                          label: 'City',
+                          hintText: 'Scotland',
+                        ),
+
+                        const SizedBox(height: AppSpacing.s16),
+
+                        const CustomTextFormField(
+                          label: 'Tell me about yourself',
+                          hintText: 'Type here',
+                          isLongText: true,
+                          keyboardType: TextInputType.multiline,
+                        ),
+                      ],
+
                       const SizedBox(height: AppSpacing.s16),
 
-                      PhoneInputFormField(),
-
-                      const SizedBox(height: AppSpacing.s16),
-
-                      CustomTextFormField(
-                        label: 'Country',
-                        hintText: 'United Kingdom',
-                      ),
-
-                      const SizedBox(height: AppSpacing.s16),
-
-                      CustomTextFormField(label: 'City', hintText: 'Scotland'),
-
-                      const SizedBox(height: AppSpacing.s16),
-
-                      CustomTextFormField(
-                        label: 'Tell me about yourself',
-                        hintText: 'Type here',
-                        isLongText: true,
-                        keyboardType: TextInputType.multiline,
-                      ),
-
-                      const SizedBox(height: AppSpacing.s16),
-
-                      CustomTextFormField(
+                      const CustomTextFormField(
                         label: 'Referral Code (Optional)',
                         hintText: 'Enter your referral code',
                       ),
 
                       const SizedBox(height: AppSpacing.s32),
 
-                      MainButton(onPressed: () {}),
+                      MainButton(
+                        onPressed: () {
+                          if (_isConsultant) {
+                          } else {
+                            Navigator.pushNamed(
+                              context,
+                              Routes.selectInterestScreen,
+                            );
+                          }
+                        },
+                      ),
                     ],
                   ),
                 ),

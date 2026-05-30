@@ -1,4 +1,4 @@
-import '../../../domain/onboarding/entities/country_entity.dart';
+import '../../../domain/entities/country_entity.dart';
 import '../models/country_model.dart';
 
 class CountryMapper {

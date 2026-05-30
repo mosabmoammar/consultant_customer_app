@@ -5,8 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../config/theme/app_colors.dart';
 import '../../../../config/theme/app_spacing.dart';
 import '../../../../core/utils/extensions.dart';
-import '../../../auth/domain/onboarding/entities/country_entity.dart';
-import '../../../auth/presentation/onboarding/providers/onboarding_providers.dart';
+import '../../../auth/domain/entities/country_entity.dart';
+import '../../../auth/presentation/providers/onboarding_providers.dart';
 
 class PhoneInputFormField extends ConsumerWidget {
   const PhoneInputFormField({super.key});

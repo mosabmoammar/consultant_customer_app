@@ -1,4 +1,4 @@
-import '../../../domain/onboarding/entities/onboarding_item_entity.dart';
+import '../../../domain/entities/onboarding_item_entity.dart';
 import '../models/onboarding_item_model.dart';
 
 class OnboardingItemMapper {

@@ -18,7 +18,24 @@ class UserCategorySelectionScreen extends StatefulWidget {
 
 class _UserCategorySelectionScreenState
     extends State<UserCategorySelectionScreen> {
-  int _selectedCategoryIndex = 0;
+  UserCategory? _selectedCategory;
+
+  void _continueToPersonalInfo() {
+    final selectedCategory = _selectedCategory;
+
+    if (selectedCategory == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please select customer or consultant')),
+      );
+      return;
+    }
+
+    Navigator.pushNamed(
+      context,
+      Routes.personalInfoScreen,
+      arguments: selectedCategory,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +58,13 @@ class _UserCategorySelectionScreenState
               const SizedBox(height: AppSpacing.s32),
 
               CategorySelectionCard(
-                title: 'I am looking for Consultant',
+                title: 'I am a Customer',
                 subtitle: 'Search your best consultant around the world',
                 assetSvgString: SvgAssets.customerThinking,
-                isSelected: _selectedCategoryIndex == 0,
+                isSelected: _selectedCategory == UserCategory.customer,
                 onTap: () {
                   setState(() {
-                    _selectedCategoryIndex = 0;
+                    _selectedCategory = UserCategory.customer;
                   });
                 },
               ),
@@ -55,24 +72,20 @@ class _UserCategorySelectionScreenState
               const SizedBox(height: AppSpacing.s12),
 
               CategorySelectionCard(
-                title: 'I am a Consultant Provider',
+                title: 'I am a Consultant',
                 subtitle: 'Search your best consultant around the world',
                 assetSvgString: SvgAssets.consultantThinking,
-                isSelected: _selectedCategoryIndex == 1,
+                isSelected: _selectedCategory == UserCategory.consultant,
                 onTap: () {
                   setState(() {
-                    _selectedCategoryIndex = 1;
+                    _selectedCategory = UserCategory.consultant;
                   });
                 },
               ),
 
               const Spacer(),
 
-              MainButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, Routes.personalInfoScreen);
-                },
-              ),
+              MainButton(onPressed: _continueToPersonalInfo),
             ],
           ),
         ),
