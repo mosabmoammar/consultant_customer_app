@@ -3,6 +3,7 @@ import 'package:consultant_customer_app/features/auth/presentation/view/otp_scre
 import 'package:consultant_customer_app/features/personal_information/presentation/view/personal_info_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../core/constants/enum/user_category.dart';
 import '../../features/auth/presentation/view/onboarding_screen.dart';
 import '../../features/auth/presentation/view/sign_in_via_email_screen.dart';
 import '../../features/auth/presentation/view/sign_up_methods_screen.dart';
@@ -33,10 +34,7 @@ class AppRouter {
               PersonalInfoScreen(category: category ?? UserCategory.customer),
         );
       case Routes.selectInterestScreen:
-        return MaterialPageRoute(
-          builder: (_) =>
-              SelectInterestScreen(),
-        );
+        return MaterialPageRoute(builder: (_) => SelectInterestScreen());
       default:
         return MaterialPageRoute(
           builder: (context) =>

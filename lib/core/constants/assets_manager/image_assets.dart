@@ -12,8 +12,6 @@ class ImageAssets {
   static const financialAdvisor = '$imagePath/financial_advisor.jpg';
   static const lawyer = '$imagePath/lawyer.jpg';
   static const psychologist = '$imagePath/psychologist.jpg';
-  static const realEstate = '$imagePath/real_estate.jpg';
   static const tutors = '$imagePath/tutors.jpg';
   static const youtubers = '$imagePath/youtubers.jpg';
-
 }

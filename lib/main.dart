@@ -34,7 +34,6 @@ class MainApp extends StatelessWidget {
       theme: AppTheme.light,
       onGenerateRoute: AppRouter.onGenerateRoute,
       initialRoute: Routes.onboardingScreen,
-      home: const SignUpMethodsScreen(),
     );
   }
 }

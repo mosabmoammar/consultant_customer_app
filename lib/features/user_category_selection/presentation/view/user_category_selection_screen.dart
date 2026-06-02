@@ -6,6 +6,7 @@ import 'package:consultant_customer_app/features/user_category_selection/present
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/app_spacing.dart';
+import '../../../../core/constants/enum/user_category.dart';
 import '../../../../core/widgets/icon_button_back_arrow.dart';
 
 class UserCategorySelectionScreen extends StatefulWidget {
@@ -50,7 +51,7 @@ class _UserCategorySelectionScreenState
           padding: const EdgeInsets.all(AppSpacing.s16),
           child: Column(
             children: [
-              TextTitle(
+              const TextTitle(
                 text:
                     'Tell us who you are and how you\'d like to engage with the app',
               ),

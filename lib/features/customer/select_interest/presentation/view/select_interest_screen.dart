@@ -1,3 +1,4 @@
+import 'package:consultant_customer_app/core/widgets/main_button.dart';
 import 'package:consultant_customer_app/features/customer/select_interest/presentation/widgets/interest_item.dart';
 import 'package:flutter/material.dart';
 
@@ -14,15 +15,20 @@ class SelectInterestScreen extends StatefulWidget {
 }
 
 class _SelectInterestScreenState extends State<SelectInterestScreen> {
-  final List<Map<String, String>> _listOfItem = [
-    {'imagePath': ImageAssets.astrologer, 'text': 'Astrologer'},
-    {'imagePath': ImageAssets.doctor, 'text': 'Doctor'},
-    {'imagePath': ImageAssets.financialAdvisor, 'text': 'Financial Advisor'},
-    {'imagePath': ImageAssets.lawyer, 'text': 'Lawyer'},
-    {'imagePath': ImageAssets.psychologist, 'text': 'Psychologist'},
-    {'imagePath': ImageAssets.realEstate, 'text': 'Real Estate'},
-    {'imagePath': ImageAssets.tutors, 'text': 'Tutors'},
-    {'imagePath': ImageAssets.youtubers, 'text': 'Youtubers'},
+  int? selectedIndex;
+  final List<Map<String, dynamic>> _listOfItem = [
+    {'id': 1, 'imagePath': ImageAssets.astrologer, 'text': 'Astrologer'},
+    {'id': 2, 'imagePath': ImageAssets.doctor, 'text': 'Doctor'},
+    {
+      'id': 3,
+      'imagePath': ImageAssets.financialAdvisor,
+      'text': 'Financial Advisor',
+    },
+    {'id': 4, 'imagePath': ImageAssets.lawyer, 'text': 'Lawyer'},
+    {'id': 5, 'imagePath': ImageAssets.psychologist, 'text': 'Psychologist'},
+    {'id': 6, 'imagePath': ImageAssets.doctor, 'text': 'Real Estate'},
+    {'id': 7, 'imagePath': ImageAssets.tutors, 'text': 'Tutors'},
+    {'id': 8, 'imagePath': ImageAssets.youtubers, 'text': 'Youtubers'},
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,33 +38,70 @@ class _SelectInterestScreenState extends State<SelectInterestScreen> {
         leading: const IconButtonBackArrow(),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(AppSpacing.s16),
-            child: Column(
-              children: [
-                // Title
-                const TextTitle(text: 'What type of consultant do you need?'),
+        child: Padding(
+          padding: const EdgeInsets.all(AppSpacing.s16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Title
+              const TextTitle(text: 'What type of consultant do you need?'),
 
-                const SizedBox(height: AppSpacing.s24),
+              const SizedBox(height: AppSpacing.s24),
+              Expanded(
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: GridView.builder(
+                        padding: const EdgeInsets.only(bottom: 16.0),
+                        itemCount: _listOfItem.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: AppSpacing.s16,
+                              mainAxisSpacing: AppSpacing.s24,
+                            ),
 
-                GridView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: _listOfItem.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                  ),
-                  itemBuilder: (context, index) {
-                    final item = _listOfItem[index];
-                    return InterestItem(
-                      imageAsset: item['imagePath']!,
-                      text: item['text']!,
-                    );
-                  },
+                        itemBuilder: (context, index) {
+                          final item = _listOfItem[index];
+
+                          return InterestItem(
+                            imageAsset: item['imagePath']!,
+                            text: item['text']!,
+                            isSelected: selectedIndex == index,
+                            onTap: () {
+                              setState(() {
+                                selectedIndex = index;
+                              });
+                            },
+                          );
+                        },
+                      ),
+                    ),
+
+                    Positioned(
+                      left: 0.0,
+                      right: 0.0,
+                      bottom: 0.0,
+                      child: IgnorePointer(
+                        ignoring: true,
+                        child: Container(
+                          height: AppSpacing.s32,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [Colors.white.withAlpha(0), Colors.white],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+
+              MainButton(onPressed: () {}),
+            ],
           ),
         ),
       ),

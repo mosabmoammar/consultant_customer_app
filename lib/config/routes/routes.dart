@@ -10,5 +10,3 @@ class Routes {
   static const String personalInfoScreen = '/personal_information_screen';
   static const String selectInterestScreen = '/select_interest_screen';
 }
-
-enum UserCategory { customer, consultant }

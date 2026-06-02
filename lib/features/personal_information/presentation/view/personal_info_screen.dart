@@ -9,6 +9,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/app_spacing.dart';
+import '../../../../core/constants/enum/user_category.dart';
 import '../../../../core/widgets/icon_button_back_arrow.dart';
 
 class PersonalInfoScreen extends StatefulWidget {
