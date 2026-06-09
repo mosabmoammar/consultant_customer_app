@@ -1,5 +1,6 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/features/auth/presentation/view/otp_screen.dart';
+import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/view/set_expertise_screen.dart';
 import 'package:consultant_customer_app/features/personal_information/presentation/view/personal_info_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,9 @@ class AppRouter {
               PersonalInfoScreen(category: category ?? UserCategory.customer),
         );
       case Routes.selectInterestScreen:
-        return MaterialPageRoute(builder: (_) => SelectInterestScreen());
+        return MaterialPageRoute(builder: (_) => const SelectInterestScreen());
+      case Routes.setExpertiseScreen:
+        return MaterialPageRoute(builder: (_) => const SetExpertiseScreen());
       default:
         return MaterialPageRoute(
           builder: (context) =>

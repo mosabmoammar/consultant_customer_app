@@ -27,7 +27,7 @@ class OnboardingNotifier extends Notifier<OnboardingState> {
   void startAutoScroll(void Function() onTick) {
     _stopAutoScroll();
     _autoScrollTimer = Timer.periodic(
-      const Duration(seconds: 10),
+      const Duration(seconds: 3),
       (_) => onTick(),
     );
   }

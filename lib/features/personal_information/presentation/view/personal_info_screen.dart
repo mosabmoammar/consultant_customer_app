@@ -141,6 +141,7 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                       MainButton(
                         onPressed: () {
                           if (_isConsultant) {
+                            Navigator.pushNamed(context, Routes.setExpertiseScreen);
                           } else {
                             Navigator.pushNamed(
                               context,

@@ -31,11 +31,19 @@ class _UserCategorySelectionScreenState
       return;
     }
 
-    Navigator.pushNamed(
-      context,
-      Routes.personalInfoScreen,
-      arguments: selectedCategory,
-    );
+    if (selectedCategory == UserCategory.customer) {
+      Navigator.pushNamed(
+        context,
+        Routes.personalInfoScreen,
+        arguments: selectedCategory,
+      );
+    } else if (selectedCategory == UserCategory.consultant) {
+      Navigator.pushNamed(
+        context,
+        Routes.personalInfoScreen,
+        arguments: selectedCategory,
+      );
+    }
   }
 
   @override

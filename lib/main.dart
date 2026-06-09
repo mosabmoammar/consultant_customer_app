@@ -7,8 +7,6 @@ import 'package:consultant_customer_app/config/routes/app_router.dart';
 import 'package:consultant_customer_app/config/theme/app_theme.dart';
 import 'package:consultant_customer_app/config/routes/routes.dart';
 
-import 'features/auth/presentation/view/sign_up_methods_screen.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 

@@ -33,7 +33,7 @@ class InterestItem extends StatelessWidget {
                     : null,
               ),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(AppSpacing.s8),
+                borderRadius: BorderRadius.circular(AppSpacing.s4),
                 child: Image.asset(
                   imageAsset,
                   fit: BoxFit.cover,

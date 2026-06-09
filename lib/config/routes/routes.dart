@@ -9,4 +9,5 @@ class Routes {
       '/user_category_selection_screen';
   static const String personalInfoScreen = '/personal_information_screen';
   static const String selectInterestScreen = '/select_interest_screen';
+  static const String setExpertiseScreen = '/set_your_expertise_screen';
 }
