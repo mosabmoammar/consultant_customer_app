@@ -125,7 +125,7 @@ class TimeField extends StatefulWidget {
 }
 
 class _TimeFieldState extends State<TimeField> {
-  TimeOfDay _selectedTime = TimeOfDay(hour: 10, minute: 00);
+  TimeOfDay _selectedTime = const TimeOfDay(hour: 10, minute: 00);
 
   @override
   Widget build(BuildContext context) {

@@ -54,7 +54,6 @@ class _UserCategorySelectionScreenState
         leading: const IconButtonBackArrow(),
       ),
       body: SafeArea(
-        bottom: false,
         child: Padding(
           padding: const EdgeInsets.all(AppSpacing.s16),
           child: Column(

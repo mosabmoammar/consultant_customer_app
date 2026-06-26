@@ -59,9 +59,7 @@ class _OtpTimerState extends State<OtpTimerWidget> {
   Widget build(BuildContext context) {
     return Text(
       'Resend code in ${_formatTime(_startSeconds)}',
-      style: context.textTheme.displayLarge?.copyWith(
-        color: AppColors.darkGray5,
-      ),
+      style: context.textTheme.bodyMedium?.copyWith(color: AppColors.darkGray5),
     );
   }
 }

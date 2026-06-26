@@ -196,7 +196,7 @@ class __CountryPickerSheetState extends State<_CountryPickerSheet> {
                     title: Text(country.name),
                     trailing: Text(
                       country.dialCode,
-                      style: context.textTheme.bodyLarge?.copyWith(
+                      style: context.textTheme.bodySmall?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),

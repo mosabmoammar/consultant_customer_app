@@ -20,7 +20,10 @@ class MainButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: context.textTheme.titleLarge?.copyWith(color: Colors.white),
+          style: context.textTheme.labelLarge?.copyWith(
+            fontSize: 16.0,
+            color: context.colorScheme.onPrimary,
+          ),
         ),
       ),
     );

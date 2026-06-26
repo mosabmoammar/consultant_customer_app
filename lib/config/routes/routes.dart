@@ -1,3 +1,4 @@
+
 class Routes {
   const Routes._();
 
@@ -10,4 +11,7 @@ class Routes {
   static const String personalInfoScreen = '/personal_information_screen';
   static const String selectInterestScreen = '/select_interest_screen';
   static const String setExpertiseScreen = '/set_your_expertise_screen';
+
+
+  static const  String customerMainScreen = '/customer_main_screen';
 }

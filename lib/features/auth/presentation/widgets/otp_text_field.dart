@@ -54,7 +54,7 @@ class _OtpTextFieldState extends State<OtpTextField> {
               keyboardType: TextInputType.number,
               textAlign: TextAlign.center,
               maxLength: 1,
-              style: context.textTheme.titleLarge,
+              style: context.textTheme.bodyLarge,
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
                 counterText: "",
@@ -65,6 +65,7 @@ class _OtpTextFieldState extends State<OtpTextField> {
                     width: 2.0,
                   ),
                 ),
+                contentPadding: const EdgeInsets.all(0.0),
               ),
               onChanged: (value) {
                 if (value.length == 1 && index < 5) {

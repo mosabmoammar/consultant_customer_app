@@ -1,0 +1,142 @@
+{
+	"@@locale": "en",
+	"appTitle": "Consultant App",
+	"continueButton": "Continue",
+	"or": "or",
+	"connectWith": "Connect With",
+	"termsOfService": "Terms of Service",
+	"privacyPolicy": "Privacy Policy",
+	"byContinuingYouAgreeToThe": "By continuing you agree to the",
+	"and": "and",
+	"forgotPassword": "Forgot Password?",
+	"signIn": "Sign In",
+	"email": "Email",
+	"password": "Password",
+	"emailAddressHint": "example@email.com",
+	"passwordHint": "Min 8 characters",
+	"continueWithGoogle": "Continue with Google",
+	"continueWithGoogleLowercase": "Continue with google",
+	"continueWithFacebook": "Continue with Facebook",
+	"signInWithEmail": "Sign in with Email",
+	"continueWithEmail": "Continue with Email",
+	"enterYourMobileNumber": "Enter your mobile number",
+	"searchCountryOrDialCode": "Search country or dial code",
+	"phoneNumber": "Phone Number",
+	"phoneNumberDigitsHint": "1234567890",
+	"searchForConsultant": "Search for Consultant",
+	"helloName": "Hello, {name}",
+	"@helloName": {
+		"placeholders": {
+			"name": {
+				"type": "String"
+			}
+		}
+	},
+	"findYourConsultant": "Find your Consultant",
+	"consultant": "Consultant",
+	"following": "Following",
+	"followingScreen": "Following Screen",
+	"chooseYourCategory": "Choose your Category",
+	"viewAll": "View all",
+	"expertFinancialGuidance": "Expert Financial Guidance",
+	"bookATrustedAdvisorForYourNextMove": "Book a trusted advisor for your next move.",
+	"explore": "Explore",
+	"smartPlanningSession": "Smart Planning Session",
+	"turnGoalsIntoAClearActionPlan": "Turn goals into a clear action plan.",
+	"viewOffer": "View offer",
+	"yourNextOpportunity": "Your Next Opportunity",
+	"getMatchedWithTheRightSpecialist": "Get matched with the right specialist.",
+	"seeDetails": "See details",
+	"categories": "Categories",
+	"profile": "Profile",
+	"message": "Message",
+	"myConsult": "My Consult",
+	"routeNotFound": "Route not found",
+	"pleaseSelectCustomerOrConsultant": "Please select customer or consultant",
+	"tellUsWhoYouAreAndHowYouDLikeToEngageWithTheApp": "Tell us who you are and how you'd like to engage with the app",
+	"iAmACustomer": "I am a Customer",
+	"searchYourBestConsultantAroundTheWorld": "Search your best consultant around the world",
+	"iAmAConsultant": "I am a Consultant",
+	"discoverYourIdealConsultant": "Discover Your Ideal Consultant",
+	"diverseRangeOfCategoriesAndConnectWithExperiencedConsultants": "Diverse range of categories and connect with experienced consultants",
+	"bookASessionInstantly": "Book a Session Instantly",
+	"scheduleAMeetingInSecondsWithOurSmartBookingSystem": "Schedule a meeting in seconds with our smart booking system",
+	"growWithExpertGuidance": "Grow With Expert Guidance",
+	"getPersonalizedAdviceFromTopProfessionalsInEveryField": "Get personalized advice from top professionals in every field",
+	"enterYourOtpSentToYourMobileNumber": "Enter your OTP sent to your mobile number {dialNumber}",
+	"@enterYourOtpSentToYourMobileNumber": {
+		"placeholders": {
+			"dialNumber": {
+				"type": "String"
+			}
+		}
+	},
+	"resendCodeIn": "Resend code in {time}",
+	"@resendCodeIn": {
+		"placeholders": {
+			"time": {
+				"type": "String"
+			}
+		}
+	},
+	"fillYourPersonalInformation": "Fill your personal information",
+	"uploadPhoto": "Upload photo",
+	"name": "Name",
+	"jhonDoe": "Jhon Doe",
+	"emailId": "Email ID",
+	"johndoeEmail": "johndoe@email.com",
+	"country": "Country",
+	"unitedKingdom": "United Kingdom",
+	"city": "City",
+	"scotland": "Scotland",
+	"tellMeAboutYourself": "Tell me about yourself",
+	"typeHere": "Type here",
+	"referralCodeOptional": "Referral Code (Optional)",
+	"enterYourReferralCode": "Enter your referral code",
+	"setYourExpertise": "Set your expertise",
+	"setYourExprtise": "Set your exprtise",
+	"category": "Category",
+	"eGCategory": "e.g Category",
+	"introductionVideo": "Introduction video",
+	"pasteYouTubeLinkHere": "Paste YouTube link here",
+	"identityProof": "Identity Proof",
+	"uploadDocument": "Upload Document",
+	"schedule": "Schedule",
+	"addTime": "Add time",
+	"audioCallPerMin": "Audio Call (per min)",
+	"videoCallPerMin": "Video Call (per min)",
+	"chatPerSession": "Chat (per session)",
+	"markAsFree": "Mark as free",
+	"finish": "Finish",
+	"setPrice": "Set price",
+	"feeHint": "00.0",
+	"categoryAstrologer": "Astrologer",
+	"categoryDoctor": "Doctor",
+	"categoryFinancialAdvisor": "Financial Advisor",
+	"categoryLawyer": "Lawyer",
+	"categoryPsychologist": "Psychologist",
+	"categoryRealEstate": "Real Estate",
+	"categoryTutors": "Tutors",
+	"categoryYoutubers": "Youtubers",
+	"daysMon": "Mon",
+	"daysTue": "Tue",
+	"daysWed": "Wed",
+	"daysThu": "Thur",
+	"daysFri": "Fri",
+	"daysSat": "Sat",
+	"daysSun": "Sun",
+	"supportServerError": "A server error occurred.",
+	"supportCacheError": "A cache error occurred.",
+	"supportFailedLocalAsset": "Failed to load local asset.",
+	"supportNoInternet": "No internet connection.",
+	"supportFailedParse": "Failed to parse data.",
+	"supportUnauthorized": "Unauthorized access.",
+	"supportFailedToLoadOnboardingData": "Failed to load onboarding data : {error}",
+	"@supportFailedToLoadOnboardingData": {
+		"placeholders": {
+			"error": {
+				"type": "String"
+			}
+		}
+	}
+}

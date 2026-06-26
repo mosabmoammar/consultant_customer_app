@@ -1,9 +1,10 @@
+import 'package:consultant_customer_app/config/routes/routes.dart';
+import 'package:consultant_customer_app/core/common/mock_data/mock_data.dart';
 import 'package:consultant_customer_app/core/widgets/main_button.dart';
 import 'package:consultant_customer_app/features/customer/select_interest/presentation/widgets/interest_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_spacing.dart';
-import '../../../../../core/constants/assets_manager/image_assets.dart';
 import '../../../../../core/widgets/icon_button_back_arrow.dart';
 import '../../../../../core/widgets/text_title.dart';
 
@@ -16,20 +17,7 @@ class SelectInterestScreen extends StatefulWidget {
 
 class _SelectInterestScreenState extends State<SelectInterestScreen> {
   int? selectedIndex;
-  final List<Map<String, dynamic>> _listOfItem = [
-    {'id': 1, 'imagePath': ImageAssets.astrologer, 'text': 'Astrologer'},
-    {'id': 2, 'imagePath': ImageAssets.doctor, 'text': 'Doctor'},
-    {
-      'id': 3,
-      'imagePath': ImageAssets.financialAdvisor,
-      'text': 'Financial Advisor',
-    },
-    {'id': 4, 'imagePath': ImageAssets.lawyer, 'text': 'Lawyer'},
-    {'id': 5, 'imagePath': ImageAssets.psychologist, 'text': 'Psychologist'},
-    {'id': 6, 'imagePath': ImageAssets.doctor, 'text': 'Real Estate'},
-    {'id': 7, 'imagePath': ImageAssets.tutors, 'text': 'Tutors'},
-    {'id': 8, 'imagePath': ImageAssets.youtubers, 'text': 'Youtubers'},
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +41,7 @@ class _SelectInterestScreenState extends State<SelectInterestScreen> {
                     Positioned.fill(
                       child: GridView.builder(
                         padding: const EdgeInsets.only(bottom: 16.0),
-                        itemCount: _listOfItem.length,
+                        itemCount: MockData.jobCategories.length,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
@@ -62,7 +50,7 @@ class _SelectInterestScreenState extends State<SelectInterestScreen> {
                             ),
 
                         itemBuilder: (context, index) {
-                          final item = _listOfItem[index];
+                          final item = MockData.jobCategories[index];
 
                           return InterestItem(
                             imageAsset: item['imagePath']!,
@@ -100,7 +88,15 @@ class _SelectInterestScreenState extends State<SelectInterestScreen> {
                 ),
               ),
 
-              MainButton(onPressed: () {}),
+              MainButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    Routes.customerMainScreen,
+                    (route) => false,
+                  );
+                },
+              ),
             ],
           ),
         ),

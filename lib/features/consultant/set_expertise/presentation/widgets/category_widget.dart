@@ -23,7 +23,7 @@ class CategoryWidget extends StatelessWidget {
           child: Container(
             height: AppSpacing.s44,
             width: double.infinity,
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.s16,
               vertical: AppSpacing.s12,
             ),
@@ -40,7 +40,7 @@ class CategoryWidget extends StatelessWidget {
                     color: AppColors.darkGray2,
                   ),
                 ),
-                Icon(Icons.arrow_forward_ios_rounded, weight: 20.0),
+                const Icon(Icons.arrow_forward_ios_rounded, weight: 20.0),
               ],
             ),
           ),

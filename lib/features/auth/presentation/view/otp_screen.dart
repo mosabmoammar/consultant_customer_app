@@ -45,7 +45,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
                       TextTitle(
                         text:
-                            'Enter your OTP sent to your mobile number ${dialNumber}',
+                            'Enter your OTP sent to your mobile number $dialNumber',
                       ),
 
                       const SizedBox(height: AppSpacing.s24),
@@ -56,7 +56,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       const SizedBox(height: AppSpacing.s8),
 
                       // OTP resend code timer
-                      Align(
+                      const Align(
                         alignment: Alignment.centerRight,
                         child: OtpTimerWidget(),
                       ),

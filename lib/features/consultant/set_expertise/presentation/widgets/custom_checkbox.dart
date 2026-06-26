@@ -24,10 +24,10 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
         Checkbox(
           value: widget.value,
           onChanged: widget.onChanged,
-          side: BorderSide(width: 1.0),
+          side: const BorderSide(width: 1.0),
           activeColor: AppColors.cbActiveColor,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          visualDensity: VisualDensity(
+          visualDensity: const VisualDensity(
             horizontal: VisualDensity.minimumDensity,
             vertical: VisualDensity.minimumDensity,
           ),

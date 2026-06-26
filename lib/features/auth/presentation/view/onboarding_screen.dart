@@ -60,6 +60,11 @@ class OnboardingScreen extends ConsumerWidget {
     final screenHeight = MediaQuery.heightOf(context);
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        toolbarHeight: 0.0,
+      ),
       resizeToAvoidBottomInset: false,
       body: SafeArea(
         child: LayoutBuilder(
@@ -112,7 +117,7 @@ class OnboardingScreen extends ConsumerWidget {
 
                       const SizedBox(width: AppSpacing.s8),
 
-                      Text('or', style: context.textTheme.titleLarge),
+                      Text('or', style: context.textTheme.bodyLarge),
 
                       const SizedBox(width: AppSpacing.s8),
 
@@ -137,7 +142,7 @@ class OnboardingScreen extends ConsumerWidget {
                       children: [
                         Text(
                           'Connect With',
-                          style: context.textTheme.titleLarge,
+                          style: context.textTheme.bodyLarge,
                         ),
                         const SizedBox(width: AppSpacing.s8),
                         SvgPicture.asset(SvgAssets.google),

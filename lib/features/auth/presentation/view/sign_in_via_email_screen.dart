@@ -54,7 +54,7 @@ class _SignInViaEmailScreenState extends State<SignInViaEmailScreen> {
 
                       const SizedBox(height: AppSpacing.s16),
 
-                      CustomPasswordFormField(
+                      const CustomPasswordFormField(
                         label: 'Password',
                         hintText: 'Min 8 characters',
                       ),
@@ -71,8 +71,9 @@ class _SignInViaEmailScreenState extends State<SignInViaEmailScreen> {
                           },
                           child: Text(
                             'Forgot Password?',
-                            style: context.textTheme.displayMedium?.copyWith(
-                              color: AppColors.lightRed1,
+                            style: context.textTheme.labelMedium?.copyWith(
+                              color: context.colorScheme.secondary,
+                              fontSize: 14.0,
                             ),
                             textAlign: TextAlign.end,
                           ),

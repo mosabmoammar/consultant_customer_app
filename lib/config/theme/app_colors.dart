@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
-  AppColors._();
-
+abstract class AppColors {
   static const primary = Color(0xFF3E61FF);
   static const secondary = Color(0xFFF47839);
 
@@ -29,7 +27,6 @@ class AppColors {
   static const lightOrange2 = Color(0xFFFFEDE3);
   static const lightOrange3 = Color(0xFFFFDCCA);
 
-  static const yellow = Color(0xFFFFC107);
 
   static const cbActiveColor = Color(0xFF28A058);
   static const green1 = Color(0xFF098E46);
@@ -40,7 +37,7 @@ class AppColors {
   static const lightRed = Color(0xFFFF6767);
   static const lightRed1 = Color(0xFFF26464);
 
-
-  static const textFieldColor = Color(0xFFE6E6E6);
+  static const textFieldColor = Color(0xFFF3F3F3);
   static const onTextFieldColor = Color(0xFF969696);
+  static const starColor = Color(0xFFFFC107);
 }

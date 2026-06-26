@@ -13,7 +13,8 @@ class AuthMethod extends StatelessWidget {
     required this.image,
     required this.title,
     required this.onTap,
-    this.alignment, this.color,
+    this.alignment,
+    this.color,
   });
 
   @override
@@ -34,7 +35,10 @@ class AuthMethod extends StatelessWidget {
           children: [
             Image.asset(image, width: AppSpacing.s24),
             const SizedBox(width: AppSpacing.s16),
-            Text(title, style: context.textTheme.titleLarge),
+            Text(
+              title,
+              style: context.textTheme.labelLarge?.copyWith(fontSize: 16.0),
+            ),
           ],
         ),
       ),

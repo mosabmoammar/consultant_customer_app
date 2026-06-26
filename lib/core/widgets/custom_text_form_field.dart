@@ -32,26 +32,30 @@ class CustomTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label, style: context.textTheme.titleMedium),
+        Text(
+          label,
+          style: context.textTheme.labelMedium?.copyWith(
+            fontSize: 12.0,
+            height: 1.26,
+          ),
+        ),
         const SizedBox(height: AppSpacing.s4),
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,
           style: context.textTheme.labelMedium,
           decoration: InputDecoration(
-            fillColor: AppColors.lightGray2,
-            filled: true,
             hintText: hintText,
             constraints: BoxConstraints(
               maxHeight: isLongText ? AppSpacing.s100 : AppSpacing.s44,
             ),
-            contentPadding: EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: AppSpacing.s16,
               vertical: AppSpacing.s12,
             ),
 
-            hintStyle: context.textTheme.labelMedium?.copyWith(
-              color: AppColors.gray,
+            hintStyle: context.textTheme.labelSmall?.copyWith(
+              color: context.colorScheme.onSurfaceVariant,
             ),
             suffixIcon: suffixIcon,
           ),

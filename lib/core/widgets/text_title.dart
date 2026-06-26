@@ -10,7 +10,7 @@ class TextTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: style ?? context.textTheme.headlineMedium,
+      style: style ?? context.textTheme.headlineLarge?.copyWith(fontSize: 20),
     );
   }
 }

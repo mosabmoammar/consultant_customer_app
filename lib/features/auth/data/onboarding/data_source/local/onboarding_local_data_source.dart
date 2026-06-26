@@ -16,21 +16,21 @@ class OnboardingLocalDataSourceImpl implements OnboardingLocalDataSource {
       return const [
         OnboardingItemModel(
           imagePath: ImageAssets.onboarding,
-          title: 'Discover Your Ideal\nConsultant',
+          title: 'Discover Your Ideal Consultant',
           subtitle:
-              'Diverse range of categories and connect\nwith experienced consultants',
+              'Diverse range of categories and connect with experienced consultants',
         ),
         OnboardingItemModel(
           imagePath: ImageAssets.onboarding,
-          title: 'Book a Session\nInstantly',
+          title: 'Instant Bookings,Hassle-Free',
           subtitle:
-              'Schedule a meeting in seconds with\nour smart booking system',
+              'You can easily book video or audio calls with your chosen consultant ',
         ),
         OnboardingItemModel(
           imagePath: ImageAssets.onboarding,
-          title: 'Grow With Expert\nGuidance',
+          title: 'Secure Payments for Peace of Mind',
           subtitle:
-              'Get personalized advice from top\nprofessionals in every field',
+              'Make payments with confidence, knowing that your information is well-protected',
         ),
       ];
     } catch (e) {

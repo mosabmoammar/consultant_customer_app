@@ -38,11 +38,9 @@ class PhoneInputRow extends ConsumerWidget {
               style: context.textTheme.labelSmall,
               decoration: InputDecoration(
                 hintText: 'Enter your mobile number',
-                hintStyle: context.textTheme.labelSmall?.copyWith(
-                  color: AppColors.gray,
+                hintStyle: context.textTheme.labelMedium?.copyWith(
+                  color: context.colorScheme.onSurfaceVariant,
                 ),
-                fillColor: AppColors.textFieldColor,
-                filled: false,
               ),
             ),
           ),
@@ -158,7 +156,7 @@ class __CountryPickerSheetState extends State<_CountryPickerSheet> {
               decoration: InputDecoration(
                 hintText: 'Search country or dial code',
                 hintStyle: context.textTheme.labelSmall?.copyWith(
-                  color: AppColors.gray,
+                  color: context.colorScheme.onSurfaceVariant,
                 ),
                 prefixIcon: const Icon(Icons.search, size: 20),
                 filled: true,
@@ -189,7 +187,7 @@ class __CountryPickerSheetState extends State<_CountryPickerSheet> {
                     title: Text(country.name),
                     trailing: Text(
                       country.dialCode,
-                      style: context.textTheme.bodyLarge?.copyWith(
+                      style: context.textTheme.bodySmall?.copyWith(
                         fontWeight: FontWeight.bold,
                       ),
                     ),

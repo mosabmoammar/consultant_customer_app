@@ -1,0 +1,142 @@
+{
+	"@@locale": "ar",
+	"appTitle": "تطبيق المستشار",
+	"continueButton": "متابعة",
+	"or": "أو",
+	"connectWith": "اتصل عبر",
+	"termsOfService": "شروط الخدمة",
+	"privacyPolicy": "سياسة الخصوصية",
+	"byContinuingYouAgreeToThe": "بالمتابعة فإنك توافق على",
+	"and": "و",
+	"forgotPassword": "هل نسيت كلمة المرور؟",
+	"signIn": "تسجيل الدخول",
+	"email": "البريد الإلكتروني",
+	"password": "كلمة المرور",
+	"emailAddressHint": "example@email.com",
+	"passwordHint": "8 أحرف على الأقل",
+	"continueWithGoogle": "المتابعة عبر Google",
+	"continueWithGoogleLowercase": "المتابعة عبر google",
+	"continueWithFacebook": "المتابعة عبر Facebook",
+	"signInWithEmail": "تسجيل الدخول عبر البريد الإلكتروني",
+	"continueWithEmail": "المتابعة عبر البريد الإلكتروني",
+	"enterYourMobileNumber": "أدخل رقم هاتفك المحمول",
+	"searchCountryOrDialCode": "ابحث عن الدولة أو رمز الاتصال",
+	"phoneNumber": "رقم الهاتف",
+	"phoneNumberDigitsHint": "1234567890",
+	"searchForConsultant": "ابحث عن مستشار",
+	"helloName": "مرحبًا، {name}",
+	"@helloName": {
+		"placeholders": {
+			"name": {
+				"type": "String"
+			}
+		}
+	},
+	"findYourConsultant": "اعثر على المستشار المناسب لك",
+	"consultant": "المستشار",
+	"following": "المتابعة",
+	"followingScreen": "شاشة المتابعة",
+	"chooseYourCategory": "اختر فئتك",
+	"viewAll": "عرض الكل",
+	"expertFinancialGuidance": "إرشاد مالي احترافي",
+	"bookATrustedAdvisorForYourNextMove": "احجز مستشارًا موثوقًا لخطوتك القادمة.",
+	"explore": "استكشف",
+	"smartPlanningSession": "جلسة تخطيط ذكية",
+	"turnGoalsIntoAClearActionPlan": "حوّل الأهداف إلى خطة عمل واضحة.",
+	"viewOffer": "عرض العرض",
+	"yourNextOpportunity": "فرصتك التالية",
+	"getMatchedWithTheRightSpecialist": "احصل على المطابقة مع الأخصائي المناسب.",
+	"seeDetails": "عرض التفاصيل",
+	"categories": "الفئات",
+	"profile": "الملف الشخصي",
+	"message": "الرسائل",
+	"myConsult": "استشاراتي",
+	"routeNotFound": "الصفحة غير موجودة",
+	"pleaseSelectCustomerOrConsultant": "يرجى اختيار عميل أو مستشار",
+	"tellUsWhoYouAreAndHowYouDLikeToEngageWithTheApp": "أخبرنا من أنت وكيف ترغب في استخدام التطبيق",
+	"iAmACustomer": "أنا عميل",
+	"searchYourBestConsultantAroundTheWorld": "ابحث عن أفضل مستشار لك حول العالم",
+	"iAmAConsultant": "أنا مستشار",
+	"discoverYourIdealConsultant": "اكتشف المستشار المثالي لك",
+	"diverseRangeOfCategoriesAndConnectWithExperiencedConsultants": "مجموعة متنوعة من الفئات وتواصل مع مستشارين ذوي خبرة",
+	"bookASessionInstantly": "احجز جلسة فورًا",
+	"scheduleAMeetingInSecondsWithOurSmartBookingSystem": "جدول اجتماع خلال ثوانٍ عبر نظام الحجز الذكي",
+	"growWithExpertGuidance": "تطور بإرشاد الخبراء",
+	"getPersonalizedAdviceFromTopProfessionalsInEveryField": "احصل على نصائح مخصصة من أفضل المحترفين في كل مجال",
+	"enterYourOtpSentToYourMobileNumber": "أدخل رمز التحقق المرسل إلى رقم هاتفك {dialNumber}",
+	"@enterYourOtpSentToYourMobileNumber": {
+		"placeholders": {
+			"dialNumber": {
+				"type": "String"
+			}
+		}
+	},
+	"resendCodeIn": "إعادة إرسال الرمز خلال {time}",
+	"@resendCodeIn": {
+		"placeholders": {
+			"time": {
+				"type": "String"
+			}
+		}
+	},
+	"fillYourPersonalInformation": "أكمل بياناتك الشخصية",
+	"uploadPhoto": "رفع الصورة",
+	"name": "الاسم",
+	"jhonDoe": "جون دو",
+	"emailId": "البريد الإلكتروني",
+	"johndoeEmail": "johndoe@email.com",
+	"country": "الدولة",
+	"unitedKingdom": "المملكة المتحدة",
+	"city": "المدينة",
+	"scotland": "اسكتلندا",
+	"tellMeAboutYourself": "حدثني عن نفسك",
+	"typeHere": "اكتب هنا",
+	"referralCodeOptional": "رمز الإحالة (اختياري)",
+	"enterYourReferralCode": "أدخل رمز الإحالة الخاص بك",
+	"setYourExpertise": "حدد خبرتك",
+	"setYourExprtise": "حدد خبرتك",
+	"category": "الفئة",
+	"eGCategory": "مثال: الفئة",
+	"introductionVideo": "فيديو تعريفي",
+	"pasteYouTubeLinkHere": "ألصق رابط YouTube هنا",
+	"identityProof": "إثبات الهوية",
+	"uploadDocument": "رفع المستند",
+	"schedule": "الجدولة",
+	"addTime": "إضافة وقت",
+	"audioCallPerMin": "مكالمة صوتية (لكل دقيقة)",
+	"videoCallPerMin": "مكالمة فيديو (لكل دقيقة)",
+	"chatPerSession": "الدردشة (لكل جلسة)",
+	"markAsFree": "تحديده مجانًا",
+	"finish": "إنهاء",
+	"setPrice": "تحديد السعر",
+	"feeHint": "00.0",
+	"categoryAstrologer": "منجّم",
+	"categoryDoctor": "طبيب",
+	"categoryFinancialAdvisor": "مستشار مالي",
+	"categoryLawyer": "محامٍ",
+	"categoryPsychologist": "أخصائي نفسي",
+	"categoryRealEstate": "العقارات",
+	"categoryTutors": "مدرسون",
+	"categoryYoutubers": "صنّاع محتوى يوتيوب",
+	"daysMon": "الإثنين",
+	"daysTue": "الثلاثاء",
+	"daysWed": "الأربعاء",
+	"daysThu": "الخميس",
+	"daysFri": "الجمعة",
+	"daysSat": "السبت",
+	"daysSun": "الأحد",
+	"supportServerError": "حدث خطأ في الخادم.",
+	"supportCacheError": "حدث خطأ في ذاكرة التخزين المؤقت.",
+	"supportFailedLocalAsset": "تعذر تحميل المورد المحلي.",
+	"supportNoInternet": "لا يوجد اتصال بالإنترنت.",
+	"supportFailedParse": "تعذر تحليل البيانات.",
+	"supportUnauthorized": "وصول غير مصرح به.",
+	"supportFailedToLoadOnboardingData": "فشل تحميل بيانات المقدمة: {error}",
+	"@supportFailedToLoadOnboardingData": {
+		"placeholders": {
+			"error": {
+				"type": "String"
+			}
+		}
+	}
+}

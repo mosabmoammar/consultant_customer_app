@@ -13,13 +13,17 @@ class TermsAndPrivacy extends StatelessWidget {
       child: RichText(
         textAlign: TextAlign.center,
         text: TextSpan(
-          style: context.textTheme.displaySmall?.copyWith(color: normalColor),
+          style: context.textTheme.bodySmall?.copyWith(
+            color: normalColor,
+            fontSize: 12.0,
+          ),
           children: [
             const TextSpan(text: 'By continuing you agree to the '),
             TextSpan(
               text: 'Terms of Service',
-              style: context.textTheme.labelSmall?.copyWith(
+              style: context.textTheme.bodySmall?.copyWith(
                 color: importantColor,
+                fontSize: 12.0,
                 decoration: TextDecoration.underline,
                 decorationColor: importantColor,
               ),
@@ -27,8 +31,9 @@ class TermsAndPrivacy extends StatelessWidget {
             const TextSpan(text: ' and\n'),
             TextSpan(
               text: 'Privacy Policy',
-              style: context.textTheme.labelSmall?.copyWith(
+              style: context.textTheme.bodySmall?.copyWith(
                 color: importantColor,
+                fontSize: 12.0,
                 decoration: TextDecoration.underline,
                 decorationColor: importantColor,
               ),

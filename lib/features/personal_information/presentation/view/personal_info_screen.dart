@@ -77,7 +77,12 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
 
                       const SizedBox(height: AppSpacing.s10),
 
-                      Text('Upload photo', style: context.textTheme.bodyMedium),
+                      Text(
+                        'Upload photo',
+                        style: context.textTheme.bodyMedium?.copyWith(
+                          fontSize: 12.0,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -141,7 +146,10 @@ class _PersonalInfoScreenState extends State<PersonalInfoScreen> {
                       MainButton(
                         onPressed: () {
                           if (_isConsultant) {
-                            Navigator.pushNamed(context, Routes.setExpertiseScreen);
+                            Navigator.pushNamed(
+                              context,
+                              Routes.setExpertiseScreen,
+                            );
                           } else {
                             Navigator.pushNamed(
                               context,
