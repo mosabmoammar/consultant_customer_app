@@ -1,3 +1,4 @@
+import 'package:consultant_customer_app/core/services/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -37,6 +38,8 @@ class MainApp extends StatelessWidget {
       theme: AppTheme.light,
       onGenerateRoute: AppRouter.onGenerateRoute,
       initialRoute: Routes.onboardingScreen,
+      navigatorKey: sl<NavigationService>().navigatorKey,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

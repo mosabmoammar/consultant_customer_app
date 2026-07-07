@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../config/theme/app_colors.dart';
-import '../utils/extensions.dart';
+import '../../../config/theme/app_colors.dart';
+import '../../utils/extensions.dart';
 
 class RateWidget extends StatelessWidget {
   final double rate;

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:consultant_customer_app/config/theme/app_colors.dart';
 import 'package:consultant_customer_app/core/utils/extensions.dart';
 
-import '../../config/theme/app_spacing.dart';
+import '../../../config/theme/app_spacing.dart';
 
 class CustomTextField extends StatelessWidget {
   final String? label;
@@ -16,6 +16,8 @@ class CustomTextField extends StatelessWidget {
   final String? prefixText;
   final TextStyle? prefixTextStyle;
   final EdgeInsetsGeometry? contentPadding;
+  final bool enabled;
+  final bool autoFocus;
   const CustomTextField({
     super.key,
     this.label,
@@ -28,6 +30,8 @@ class CustomTextField extends StatelessWidget {
     this.prefixText,
     this.prefixTextStyle,
     this.contentPadding,
+    this.enabled = true,
+    this.autoFocus = false,
   });
 
   @override
@@ -46,15 +50,16 @@ class CustomTextField extends StatelessWidget {
         ],
         const SizedBox(height: AppSpacing.s4),
         SizedBox(
+          height: 44.0,
           child: TextField(
             controller: controller,
             keyboardType: keyboardType,
             style: context.textTheme.labelMedium,
+            textAlignVertical: TextAlignVertical.center,
             decoration: InputDecoration(
               fillColor: AppColors.lightGray2,
               filled: true,
               hintText: hintText,
-              constraints: const BoxConstraints(maxHeight: AppSpacing.s44),
               hintStyle: context.textTheme.labelSmall?.copyWith(
                 color: context.colorScheme.onSurfaceVariant,
               ),
@@ -62,9 +67,13 @@ class CustomTextField extends StatelessWidget {
               prefixText: prefixText,
               prefixStyle: prefixTextStyle,
               prefixIcon: prefixIcon,
+              prefixIconColor: Colors.black,
               prefixIconConstraints: prefixIconConstraints,
-              contentPadding: contentPadding,
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
+
+              enabled: enabled,
             ),
+            autofocus: autoFocus,
           ),
         ),
       ],

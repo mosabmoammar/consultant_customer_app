@@ -1,13 +1,14 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/constants/assets_manager/svg_assets.dart';
-import 'package:consultant_customer_app/core/widgets/main_button.dart';
-import 'package:consultant_customer_app/core/widgets/text_title.dart';
+import 'package:consultant_customer_app/core/shared/widgets/main_button.dart';
+import 'package:consultant_customer_app/core/shared/widgets/text_title.dart';
+import 'package:consultant_customer_app/core/utils/toast_message.dart';
 import 'package:consultant_customer_app/features/user_category_selection/presentation/widgets/category_selection_card.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/app_spacing.dart';
 import '../../../../core/constants/enum/user_category.dart';
-import '../../../../core/widgets/icon_button_back_arrow.dart';
+import '../../../../core/shared/widgets/icon_button_back_arrow.dart';
 
 class UserCategorySelectionScreen extends StatefulWidget {
   const UserCategorySelectionScreen({super.key});
@@ -25,8 +26,9 @@ class _UserCategorySelectionScreenState
     final selectedCategory = _selectedCategory;
 
     if (selectedCategory == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please select customer or consultant')),
+      showToast(
+        message: 'Please select customer or consultant',
+        type: ToastType.warning,
       );
       return;
     }

@@ -1,4 +1,4 @@
-import 'package:consultant_customer_app/core/widgets/custom_text_field.dart';
+import 'package:consultant_customer_app/core/shared/widgets/custom_text_field.dart';
 import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/widgets/custom_switch.dart';
 import 'package:flutter/material.dart';
 

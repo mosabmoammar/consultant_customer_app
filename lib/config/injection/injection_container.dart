@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 
+import '../../core/services/navigation_service.dart';
 import '../../features/auth/data/onboarding/data_source/local/onboarding_local_data_source.dart';
 import '../../features/auth/data/onboarding/mappers/country_mapper.dart';
 import '../../features/auth/data/onboarding/mappers/onboarding_item_mapper.dart';
@@ -9,7 +10,6 @@ import '../../features/auth/domain/repositories/country_repository.dart';
 import '../../features/auth/domain/repositories/onboarding_repository.dart';
 import '../../features/auth/domain/use_cases/get_countries_use_case.dart';
 import '../../features/auth/domain/use_cases/get_onboarding_items_use_case.dart';
-
 
 final sl = GetIt.instance;
 
@@ -24,6 +24,8 @@ Future<void> setupDI() async {
   sl.registerLazySingleton<OnboardingItemMapper>(
     () => const OnboardingItemMapper(),
   );
+
+  sl.registerLazySingleton<NavigationService>(() => NavigationService());
 
   // Repository
   sl.registerLazySingleton<CountryRepository>(

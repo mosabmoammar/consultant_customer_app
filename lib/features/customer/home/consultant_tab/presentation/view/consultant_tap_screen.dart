@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import "../../../../../../core/common/mock_data/mock_data.dart";
 import '../../../../../../core/constants/assets_manager/image_assets.dart';
 import '../../../../../../core/utils/extensions.dart';
-import '../../../../../../core/widgets/rate_widget.dart';
-import '../../../../../../core/widgets/user_image_profile.dart';
+import '../../../../../../core/shared/widgets/rate_widget.dart';
+import '../../../../../../core/shared/widgets/user_image_profile.dart';
 import '../../../home/presentation/widgets/header_list.dart';
 import '../../domain/entities/promo_ad_data.dart';
 
@@ -183,7 +183,7 @@ class _TopRatedItem extends StatelessWidget {
             children: [
               Text(
                 name,
-                style: context.textTheme.titleMedium?.copyWith(height: 1.0),
+                style: context.textTheme.titleLarge?.copyWith(height: 1.0),
               ),
               const SizedBox(height: 4.0),
               Text(
@@ -278,7 +278,7 @@ class _RecommendedListItem extends StatelessWidget {
           // Name
           Text(
             name,
-            style: context.textTheme.titleMedium?.copyWith(fontSize: 16.0),
+            style: context.textTheme.titleLarge?.copyWith(fontSize: 16.0),
           ),
           const SizedBox(height: 4.0),
 
@@ -375,7 +375,7 @@ class _CategoryListItem extends StatelessWidget {
             bottom: 16.0,
             child: Text(
               title,
-              style: context.textTheme.titleMedium?.copyWith(
+              style: context.textTheme.titleLarge?.copyWith(
                 fontSize: 16.0,
                 height: 1.0,
                 color: Colors.white,
@@ -519,7 +519,7 @@ class _AdsItem extends StatelessWidget {
                       adData.title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: context.textTheme.titleMedium?.copyWith(
+                      style: context.textTheme.titleLarge?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
                       ),

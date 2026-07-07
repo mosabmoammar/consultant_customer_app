@@ -1,16 +1,18 @@
-import 'package:consultant_customer_app/config/routes/routes.dart';
-import 'package:consultant_customer_app/features/auth/presentation/view/otp_screen.dart';
-import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/view/set_expertise_screen.dart';
-import 'package:consultant_customer_app/features/customer/common/presentation/view/main_screen.dart';
-import 'package:consultant_customer_app/features/personal_information/presentation/view/personal_info_screen.dart';
+import 'package:consultant_customer_app/features/customer/search/presentation/view/search_screen.dart';
+import 'package:consultant_customer_app/features/notification/presentation/view/notification_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/enum/user_category.dart';
 import '../../features/auth/presentation/view/onboarding_screen.dart';
+import '../../features/auth/presentation/view/otp_screen.dart';
 import '../../features/auth/presentation/view/sign_in_via_email_screen.dart';
 import '../../features/auth/presentation/view/sign_up_methods_screen.dart';
+import '../../features/consultant/set_expertise/presentation/view/set_expertise_screen.dart';
+import '../../features/customer/common/presentation/view/main_screen.dart';
 import '../../features/customer/select_interest/presentation/view/select_interest_screen.dart';
+import '../../features/personal_information/presentation/view/personal_info_screen.dart';
 import '../../features/user_category_selection/presentation/view/user_category_selection_screen.dart';
+import 'routes.dart';
 
 class AppRouter {
   AppRouter._();
@@ -41,6 +43,17 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SetExpertiseScreen());
       case Routes.customerMainScreen:
         return MaterialPageRoute(builder: (_) => const CustomerMainScreen());
+      case Routes.notificationScreen:
+        return MaterialPageRoute(builder: (_) => const NotificationScreen());
+      case Routes.searchScreen:
+        return PageRouteBuilder(
+          pageBuilder: (context, animation, secondaryAnimation) =>
+              const SearchScreen(),
+          transitionsBuilder:
+              (context, animation, secondaryAnimation, child) {
+                return FadeTransition(opacity: animation,child: child,);
+              },
+        );
       default:
         return MaterialPageRoute(
           builder: (context) =>

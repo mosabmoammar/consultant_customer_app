@@ -3,12 +3,12 @@ import 'package:consultant_customer_app/config/theme/app_spacing.dart';
 import 'package:consultant_customer_app/core/constants/assets_manager/svg_assets.dart';
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/utils/extensions.dart';
-import 'package:consultant_customer_app/core/widgets/terms_and_privacy.dart';
+import 'package:consultant_customer_app/core/shared/widgets/terms_and_privacy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../../core/widgets/main_button.dart';
+import '../../../../core/shared/widgets/main_button.dart';
 import '../providers/onboarding_providers.dart';
 import '../widgets/onboarding_image_section.dart';
 import '../widgets/phone_input_row.dart';

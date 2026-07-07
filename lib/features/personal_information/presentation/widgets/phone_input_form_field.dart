@@ -17,7 +17,7 @@ class PhoneInputFormField extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
 
       children: [
-        Text('Phone Number', style: context.textTheme.titleMedium),
+        Text('Phone Number', style: context.textTheme.titleLarge),
         const SizedBox(height: AppSpacing.s4),
         Container(
           height: AppSpacing.s44,

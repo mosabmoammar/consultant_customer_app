@@ -1,12 +1,12 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/common/mock_data/mock_data.dart';
-import 'package:consultant_customer_app/core/widgets/main_button.dart';
+import 'package:consultant_customer_app/core/shared/widgets/main_button.dart';
 import 'package:consultant_customer_app/features/customer/select_interest/presentation/widgets/interest_item.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_spacing.dart';
-import '../../../../../core/widgets/icon_button_back_arrow.dart';
-import '../../../../../core/widgets/text_title.dart';
+import '../../../../../core/shared/widgets/icon_button_back_arrow.dart';
+import '../../../../../core/shared/widgets/text_title.dart';
 
 class SelectInterestScreen extends StatefulWidget {
   const SelectInterestScreen({super.key});

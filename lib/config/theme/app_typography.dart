@@ -38,16 +38,22 @@ abstract class AppTypography {
         fontFamily: fontFamily,
         fontWeight: .w500,
         fontSize: 18.0,
+        height: 1.0,
       ),
       headlineSmall: TextStyle(fontFamily: fontFamily),
 
       // Title
-      titleLarge: TextStyle(fontFamily: fontFamily),
-      titleMedium: TextStyle(
+      titleLarge: TextStyle(
         fontFamily: fontFamily,
         fontWeight: .w500,
         fontSize: 18.0,
         height: 1.26,
+      ),
+      titleMedium: TextStyle(
+        fontFamily: fontFamily,
+        fontWeight: .w500,
+        fontSize: 14.0,
+        height: 1.0,
       ),
       titleSmall: TextStyle(
         fontFamily: fontFamily,

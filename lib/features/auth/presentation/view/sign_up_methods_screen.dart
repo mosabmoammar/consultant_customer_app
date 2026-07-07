@@ -2,9 +2,9 @@ import 'package:consultant_customer_app/config/theme/app_colors.dart';
 import 'package:consultant_customer_app/config/theme/app_spacing.dart';
 import 'package:consultant_customer_app/core/constants/assets_manager/image_assets.dart';
 import 'package:consultant_customer_app/config/routes/routes.dart';
-import 'package:consultant_customer_app/core/widgets/auth_method.dart';
-import 'package:consultant_customer_app/core/widgets/icon_button_back_arrow.dart';
-import 'package:consultant_customer_app/core/widgets/terms_and_privacy.dart';
+import 'package:consultant_customer_app/core/shared/widgets/auth_method.dart';
+import 'package:consultant_customer_app/core/shared/widgets/icon_button_back_arrow.dart';
+import 'package:consultant_customer_app/core/shared/widgets/terms_and_privacy.dart';
 import 'package:flutter/material.dart';
 
 class SignUpMethodsScreen extends StatelessWidget {

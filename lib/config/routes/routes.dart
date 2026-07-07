@@ -1,8 +1,7 @@
-
 class Routes {
   const Routes._();
 
-  static const String onboardingScreen = '/onboarding_screen';
+  static const String onboardingScreen = '/';
   static const String signUpMethodsScreen = '/sign_up_methods_screen';
   static const String signInViaEmailScreen = '/sign_up_via_email_screen';
   static const String otpScreen = '/otp_screen';
@@ -12,6 +11,10 @@ class Routes {
   static const String selectInterestScreen = '/select_interest_screen';
   static const String setExpertiseScreen = '/set_your_expertise_screen';
 
+  static const String customerMainScreen = '/customer_main_screen';
 
-  static const  String customerMainScreen = '/customer_main_screen';
+  static const String notificationScreen = '/notification_screen';
+  static const String searchScreen = '/search_screen';
+
+  static const String addFundsScreen = '/add_funds_screen';
 }

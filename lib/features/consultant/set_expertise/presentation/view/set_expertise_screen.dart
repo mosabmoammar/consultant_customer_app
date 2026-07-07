@@ -1,7 +1,7 @@
 import 'package:consultant_customer_app/config/theme/app_spacing.dart';
 import 'package:consultant_customer_app/core/utils/extensions.dart';
-import 'package:consultant_customer_app/core/widgets/main_button.dart';
-import 'package:consultant_customer_app/core/widgets/text_title.dart';
+import 'package:consultant_customer_app/core/shared/widgets/main_button.dart';
+import 'package:consultant_customer_app/core/shared/widgets/text_title.dart';
 import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/widgets/category_widget.dart';
 import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/widgets/custom_checkbox.dart';
 import 'package:consultant_customer_app/features/consultant/set_expertise/presentation/widgets/custom_switch.dart';
@@ -11,7 +11,7 @@ import 'package:consultant_customer_app/features/consultant/set_expertise/presen
 import 'package:flutter/material.dart';
 
 import '../../../../../config/theme/app_colors.dart';
-import '../../../../../core/widgets/icon_button_back_arrow.dart';
+import '../../../../../core/shared/widgets/icon_button_back_arrow.dart';
 import '../widgets/day_row.dart';
 
 class SetExpertiseScreen extends StatefulWidget {

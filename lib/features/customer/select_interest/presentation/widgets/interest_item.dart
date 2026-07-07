@@ -48,7 +48,7 @@ class InterestItem extends StatelessWidget {
           Text(
             text,
             style: isSelected
-                ? context.textTheme.titleMedium?.copyWith(
+                ? context.textTheme.titleLarge?.copyWith(
                     color: context.colorScheme.secondary,
                     fontSize: 16.0,
                     height: 1.00,

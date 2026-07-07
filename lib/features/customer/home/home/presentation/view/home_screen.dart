@@ -1,10 +1,11 @@
-import 'package:flutter/foundation.dart';
+import 'package:consultant_customer_app/config/routes/routes.dart';
+import 'package:consultant_customer_app/core/constants/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/utils/extensions.dart';
-import '../../../../../../core/widgets/custom_tab_bar.dart';
-import '../../../../../../core/widgets/custom_text_field.dart';
-import '../../../../../../core/widgets/wallet_widget.dart';
+import '../../../../../../core/shared/widgets/custom_tab_bar.dart';
+import '../../../../../../core/shared/widgets/custom_text_field.dart';
+import '../../../../../../core/shared/widgets/wallet_widget.dart';
 import '../../../consultant_tab/presentation/view/consultant_tap_screen.dart';
 import '../../../following_tab/presentation/view/following_tap_screen.dart';
 
@@ -49,19 +50,64 @@ class _HomeScreenState extends State<HomeScreen>
               headerSliverBuilder: (context, innerBoxIsScrolled) {
                 return [
                   const SliverToBoxAdapter(child: SizedBox(height: 16.0)),
-                  const SliverToBoxAdapter(
+                  SliverToBoxAdapter(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: UserHomeHeader(name: 'Jhon Doe'),
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: UserHomeHeader(
+                        name: 'Jhon Doe',
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            Routes.notificationScreen,
+                          );
+                        },
+                      ),
                     ),
                   ),
                   const SliverToBoxAdapter(child: SizedBox(height: 16.0)),
-                  const SliverToBoxAdapter(
+                  SliverToBoxAdapter(
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: CustomTextField(
-                        hintText: 'Search for Consultant',
-                        prefixIcon: Icon(Icons.search),
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.searchScreen);
+                        },
+                        child: Hero(
+                          tag: Constants.searchBarTag,
+                          createRectTween: (begin, end) {
+                            return MaterialRectCenterArcTween(
+                              begin: begin,
+                              end: end,
+                            );
+                          },
+                          flightShuttleBuilder:
+                              (
+                                flightContext,
+                                animation,
+                                direction,
+                                fromContext,
+                                toContext,
+                              ) {
+                                return Material(
+                                  color: Colors.transparent,
+                                  child: SingleChildScrollView(
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    child: direction == HeroFlightDirection.pop
+                                        ? fromContext.widget
+                                        : toContext.widget,
+                                  ),
+                                );
+                              },
+                          child: const Material(
+                            color: Colors.transparent,
+                            child: CustomTextField(
+                              hintText: 'Search for Consultant',
+                              prefixIcon: Icon(Icons.search),
+                              enabled: false,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -107,7 +153,8 @@ class HomeTabs extends StatelessWidget {
 
 class UserHomeHeader extends StatelessWidget {
   final String name;
-  const UserHomeHeader({super.key, required this.name});
+  final void Function() onTap;
+  const UserHomeHeader({super.key, required this.name, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -132,16 +179,17 @@ class UserHomeHeader extends StatelessWidget {
         // Icons
         Row(
           children: [
-            const WalletWidget(amount: 100.0),
+            WalletWidget(
+              amount: 100.0,
+              onTap: () {
+                Navigator.pushNamed(context, Routes.addFundsScreen);
+              },
+            ),
 
             const SizedBox(width: 4.0),
 
             InkWell(
-              onTap: () {
-                if (kDebugMode) {
-                  print('Notification Tap');
-                }
-              },
+              onTap: onTap,
               borderRadius: BorderRadius.circular(100.0),
               child: Ink(
                 padding: const EdgeInsets.all(6.0),

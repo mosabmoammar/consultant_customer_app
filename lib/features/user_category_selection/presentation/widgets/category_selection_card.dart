@@ -69,7 +69,7 @@ class CategorySelectionCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: context.textTheme.titleMedium),
+                  Text(title, style: context.textTheme.titleLarge),
                   Text(
                     subtitle,
                     style: context.textTheme.bodyMedium?.copyWith(

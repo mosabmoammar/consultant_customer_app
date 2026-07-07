@@ -1,12 +1,12 @@
 import 'package:consultant_customer_app/config/routes/routes.dart';
-import 'package:consultant_customer_app/core/widgets/main_button.dart';
-import 'package:consultant_customer_app/core/widgets/text_title.dart';
+import 'package:consultant_customer_app/core/shared/widgets/main_button.dart';
+import 'package:consultant_customer_app/core/shared/widgets/text_title.dart';
 import 'package:consultant_customer_app/features/auth/presentation/widgets/otp_text_field.dart';
 import 'package:consultant_customer_app/features/auth/presentation/widgets/otp_timer_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/app_spacing.dart';
-import '../../../../core/widgets/icon_button_back_arrow.dart';
+import '../../../../core/shared/widgets/icon_button_back_arrow.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});

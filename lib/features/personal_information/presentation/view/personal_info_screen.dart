@@ -1,16 +1,16 @@
 import 'package:consultant_customer_app/config/theme/app_colors.dart';
 import 'package:consultant_customer_app/config/routes/routes.dart';
 import 'package:consultant_customer_app/core/utils/extensions.dart';
-import 'package:consultant_customer_app/core/widgets/custom_text_form_field.dart';
-import 'package:consultant_customer_app/core/widgets/main_button.dart';
-import 'package:consultant_customer_app/core/widgets/text_title.dart';
+import 'package:consultant_customer_app/core/shared/widgets/custom_text_form_field.dart';
+import 'package:consultant_customer_app/core/shared/widgets/main_button.dart';
+import 'package:consultant_customer_app/core/shared/widgets/text_title.dart';
 import 'package:consultant_customer_app/features/personal_information/presentation/widgets/phone_input_form_field.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/theme/app_spacing.dart';
 import '../../../../core/constants/enum/user_category.dart';
-import '../../../../core/widgets/icon_button_back_arrow.dart';
+import '../../../../core/shared/widgets/icon_button_back_arrow.dart';
 
 class PersonalInfoScreen extends StatefulWidget {
   final UserCategory category;
